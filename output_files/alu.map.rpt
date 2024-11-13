@@ -1,5 +1,5 @@
 Analysis & Elaboration report for alu
-Wed Nov 13 15:57:57 2024
+Wed Nov 13 16:00:45 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Failed - Wed Nov 13 15:57:57 2024           ;
+; Analysis & Elaboration Status      ; Failed - Wed Nov 13 16:00:45 2024           ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; alu                                         ;
 ; Top-level Entity Name              ; alu                                         ;
@@ -164,7 +164,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Nov 13 15:57:44 2024
+    Info: Processing started: Wed Nov 13 16:00:32 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alu -c alu --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -191,12 +191,11 @@ Info (12021): Found 2 design units, including 1 entities, in source file adder_s
 Info (12021): Found 2 design units, including 1 entities, in source file logical_shift_right.vhd
     Info (12022): Found design unit 1: logical_shift_right-behavioral File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logical_shift_right.vhd Line: 19
     Info (12023): Found entity 1: logical_shift_right File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logical_shift_right.vhd Line: 7
-Info (12127): Elaborating entity "alu" for the top level hierarchy
-Error (10793): VHDL error at alu.vhd(5): entity alu does not have an architecture File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/alu.vhd Line: 5
-Error (12153): Can't elaborate top-level user hierarchy
-Error: Quartus Prime Analysis & Elaboration was unsuccessful. 2 errors, 1 warning
+Error (10500): VHDL syntax error at nand_gate.vhd(21) near text "end";  expecting ";" File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/nand_gate.vhd Line: 21
+Info (12021): Found 0 design units, including 0 entities, in source file nand_gate.vhd
+Error: Quartus Prime Analysis & Elaboration was unsuccessful. 1 error, 1 warning
     Error: Peak virtual memory: 4779 megabytes
-    Error: Processing ended: Wed Nov 13 15:57:57 2024
+    Error: Processing ended: Wed Nov 13 16:00:45 2024
     Error: Elapsed time: 00:00:13
     Error: Total CPU time (on all processors): 00:00:18
 
