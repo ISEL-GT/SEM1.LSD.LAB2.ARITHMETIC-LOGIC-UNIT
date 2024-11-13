@@ -3,7 +3,7 @@
 </p>
 
 
-## ARITHMETIC CIRCUIT
+## ARITHMETIC AND LOGIC UNIT
 
 ### Summary
 > Pretende-se projetar uma unidade aritmética e lógica que realize as operações aritméticas adição (𝑊𝑊 + 𝑌𝑌 +
