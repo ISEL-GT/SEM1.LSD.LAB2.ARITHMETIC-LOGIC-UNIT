@@ -1,8 +1,8 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
--- This entity is responsibly for shifting a number to the right, effectively
--- multiplying the number by two
+-- This entity is responsibly for shifting an input to the right, effectively
+-- dividing the input by two
 
 entity logical_shift_right is
 

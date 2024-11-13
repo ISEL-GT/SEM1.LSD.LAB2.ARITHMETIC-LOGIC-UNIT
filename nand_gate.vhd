@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
--- This entity is responsible for performing a NAND operation between two numbers.
+-- This entity is responsible for performing a NAND operation between two inputs
 entity nand_gate is 
 
 	port (
