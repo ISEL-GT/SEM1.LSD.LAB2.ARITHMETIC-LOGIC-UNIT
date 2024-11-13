@@ -14,7 +14,7 @@ entity arithmetic_shift_right is
 	
 end arithmetic_shift_right;
 
-architecture behavioral of arithmetic_shift_right is
+architecture structural of arithmetic_shift_right is
 begin 
 
 	result(0) <= input(1);

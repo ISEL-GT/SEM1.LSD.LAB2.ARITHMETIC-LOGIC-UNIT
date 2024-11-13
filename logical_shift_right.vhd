@@ -16,7 +16,7 @@ entity logical_shift_right is
 end logical_shift_right;
 
 
-architecture behavioral of logical_shift_right is
+architecture structural of logical_shift_right is
 begin 
 
 	result(0) <= input(1);
