@@ -3,25 +3,23 @@
 </p>
 
 
-## PROJECT NAME
+## ARITHMETIC CIRCUIT
 
 ### Summary
-> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+> Pretende-se projetar uma unidade aritmética e lógica que realize as operações aritméticas adição (𝑊𝑊 + 𝑌𝑌 +
+𝐶𝐶𝐶𝐶𝐶𝐶), subtração (𝑊𝑊 − 𝑌𝑌 − 𝐶𝐶𝐶𝐶𝐶𝐶), incremento (𝑊𝑊 + 𝐶𝐶𝐶𝐶𝐶𝐶) e decremento (𝑊𝑊 − 𝐶𝐶𝐶𝐶𝐶𝐶) e as operações de
+deslocamento (𝑊𝑊 >>> 1, 𝑊𝑊 >> 1 e 𝑊𝑊 <<< 1, e a operação lógica NAND (NOT(𝑊𝑊. 𝑌𝑌)), sobre operandos de
+4 bits. O resultado tem 4 bits e deve gerar os indicadores (flags) Carry/Borrow (CBo), Overflow (OV), Zero
+(Z), Greater or Equal (GE), Below or Equal (BE) e Parity (P).
 ###### You can find the project brief for this assignment in the [briefing](docs/assignment.pdf) file.
 
 
 ---
 
 ### **Requirements**
-- **Kotlin Compiler**: [Download here](https://kotlinlang.org/docs/command-line.html)
-- **JDK 22**: [Download here](https://www.oracle.com/java/technologies/javase/jdk22-archive-downloads.html)
-- Any other software needed to run the project.
-
----
-
-### Acknowledgements
-- Mention any people that greatly helped us complete the project, and/or made it possible.
-- Mention any resources that we used to complete this project.
+- **Quartus Prime**: [Download here](https://www.intel.com.br/content/www/br/pt/products/details/fpga/development-tools/quartus-prime.html)
+- **USB Blaster Drivers**: [Download here](https://2425moodle.isel.pt/pluginfile.php/1249818/mod_folder/content/0/Material%20de%20apoio/usb-blaster.zip?forcedownload=1)
+- **FPGA Max 10 DE - LITE** [Read More](https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&No=1021)
 
 ---
 
@@ -30,6 +28,5 @@
 | Contributor        | Email                      |
 |--------------------|----------------------------|
 | Alexandre Silva    | alexandresilva.coding@gmail.com     |
-| Daniel Viegas      | viegasdaniel111@gmail.com       |
 | Duarte Rodrigues   | duarte.afonso.rodrigues@gmail.com    |
 
