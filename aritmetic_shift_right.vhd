@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 -- This entity is responsible for shifting a number to the right, effectively
--- multiplying the number by two, while still putting the most significant bit on the leftmost digit
+-- dividing the number by two, while still putting the most significant bit on the leftmost digit
 entity arithmetic_shift_right is
 
 	port (
