@@ -14,7 +14,7 @@ entity logical_shift_left is
 	
 end logical_shift_left;
 
-architecture behavioral of logical_shift_left is
+architecture structural of logical_shift_left is
 begin 
 
 	result(0) <= '0';

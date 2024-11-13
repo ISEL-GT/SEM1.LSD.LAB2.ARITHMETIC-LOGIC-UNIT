@@ -1,0 +1,21 @@
+library ieee; 
+use ieee.std_logic_1164.all;
+
+-- This entity is responsible for acting as a full adder, using two half-adders
+-- in succession to account for first bit carries
+entity decoder is 
+
+	port (
+		operation_bits : in std_logic_vector(2 downto 0);
+		
+		increment 			  	  : out std_logic;
+		decrement   		  	  : out std_logic;
+		addition 			  	  : out std_logic;
+		subtraction 		  	  : out std_logic;
+		logical_shift_right    : out std_logic;
+		arithmetic_shift_right : out std_logic;
+		logical_shift_left  	  : out std_logic;
+		nand_operation         : out std_logic	
+	);
+	
+end full_adder;
