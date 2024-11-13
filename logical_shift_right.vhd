@@ -9,8 +9,8 @@ entity logical_shift_right is
 	port (
 		input : in std_logic_vector(3 downto 0);
 
-		result : out std_logic_vector(3 downto 0);
-		carry_out : out std_logic;
+		result    : out std_logic_vector(3 downto 0);
+		carry_out : out std_logic
 	);
 	
 end logical_shift_right;
