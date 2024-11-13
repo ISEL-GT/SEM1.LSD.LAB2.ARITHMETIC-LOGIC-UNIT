@@ -5,10 +5,10 @@ use ieee.std_logic_1164.all;
 entity nand_gate is 
 
 	port (
-		A : in std_logic;
-		B : in std_logic;
+		A : in std_logic_vector(3 downto 0);
+		B : in std_logic_vector(3 downto 0);
 		
-		result     : out std_logic
+		result : out std_logic_vector(3 downto 0);
 	);
 	
 end nand_gate;
@@ -16,6 +16,6 @@ end nand_gate;
 architecture structural of nand_gate is
 begin
 
-	result <= not (A and B)
+	result <= not (A and B);
 	
 end nand_gate;
