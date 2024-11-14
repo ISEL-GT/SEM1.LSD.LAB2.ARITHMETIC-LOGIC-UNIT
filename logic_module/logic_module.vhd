@@ -8,8 +8,8 @@ entity logic_module is
 		A 			: in std_logic_vector(3 downto 0);
 		B 			: in std_logic_vector(3 downto 0);
 		
-		S0 : in std_logic_vector;
-		S1 : in std_logic_vector;
+		S0 : in std_logic;
+		S1 : in std_logic;
 		
 		carry_out   : out std_logic;
 		result 		: out std_logic_vector(3 downto 0)
@@ -77,28 +77,28 @@ architecture behavioral of logic_module is
 			C : in std_logic_vector(3 downto 0);
 			D : in std_logic_vector(3 downto 0);	 
 		 
-			S0 : in std_logic_vector(1 downto 0);
-			S1 : in std_logic_vector(1 downto 0);
+			S0 : in std_logic;
+			S1 : in std_logic;
 
-			result : out std_logic_vector (3 downto 0) 
- 	   );
-	
+			result : out std_logic_vector(3 downto 0)
+		);
+		
 	end component;
 	
 	-- Signal of logical_shift_right
-	signal out_logical_shift_right in std_logic_vector(3 downto 0);
-	signal carry_logical_shift_right in std_logic
+	signal out_logical_shift_right : std_logic_vector(3 downto 0);
+	signal carry_logical_shift_right : std_logic;
 	
 	-- Signal of arithmetic_shift_right
-	signal out_arithmetic_shift_right in std_logic_vector(3 downto 0);
-	signal carry_arihtmetic_shift_right in std_logic
+	signal out_arithmetic_shift_right : std_logic_vector(3 downto 0);
+	signal carry_arithmetic_shift_right : std_logic;
 	
 	-- Signal of logical_shift_left
-	signal out_logical_shift_left in std_logic_vector(3 downto 0);
-	signal carry_logical_shift_left in std_logic
+	signal out_logical_shift_left : std_logic_vector(3 downto 0);
+	signal carry_logical_shift_left : std_logic;
 	
 	-- Signal of nand_gate
-	signal out_nand_gate in std_logic_vector(3 downto 0);
+	signal out_nand_gate : std_logic_vector(3 downto 0);
 	
 begin
 
@@ -119,7 +119,7 @@ begin
 			input => A,
 			
 			result 	 => out_arithmetic_shift_right,
-			carry_out => carry_arihtmetic_shift_right
+			carry_out => carry_arithmetic_shift_right
 		);
 		
 		

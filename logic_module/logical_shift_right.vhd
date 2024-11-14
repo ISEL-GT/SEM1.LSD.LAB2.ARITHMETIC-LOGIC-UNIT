@@ -26,4 +26,4 @@ begin
 	
 	carry_out <= input(0);
 	
-end behavioral;
+end structural;
