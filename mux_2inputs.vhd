@@ -9,7 +9,7 @@ entity mux_2inputs is
 		A : in std_logic_vector(3 downto 0);
 		B : in std_logic_vector(3 downto 0); 
 
-		selector : in std_logic_vector;
+		selector : in std_logic;
 
 		result : out std_logic_vector (3 downto 0) 
 	);

@@ -133,7 +133,7 @@ begin
 			carry_out => carry_logical_shift_left
 		);
 		
-		-- Instantiation of the nand_gate
+	-- Instantiation of the nand_gate
 	instance_logical_nand_gate : nand_gate
 	
 		port map (
@@ -144,7 +144,7 @@ begin
 			
 		);
 		
-			-- Instantiation of the mux_4inputs
+	-- Instantiation of the mux_4inputs
 	instance_mux_4inputs : mux_4inputs
 	
 		port map (
