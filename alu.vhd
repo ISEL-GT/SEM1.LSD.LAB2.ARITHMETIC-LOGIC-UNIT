@@ -152,8 +152,8 @@ begin
 	instance_yor : mux_2inputs 
 	
 		port map (
-			A => Y,
-			B => "0000",
+			A => "0000",
+			B => Y,
 			selector => operation_a,
 			
 			result => out_mux_yor
