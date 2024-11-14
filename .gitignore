@@ -27,3 +27,4 @@ replay_pid*
 /output_files/
 /incremental_db/
 /simulation/
+/devkits/
