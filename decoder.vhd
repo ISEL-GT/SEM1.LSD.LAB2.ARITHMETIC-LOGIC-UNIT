@@ -8,14 +8,12 @@ entity decoder is
 	port (
 		operation_bits : in std_logic_vector(2 downto 0);
 		
-		increment 			  	  : out std_logic;
-		decrement   		  	  : out std_logic;
-		addition 			  	  : out std_logic;
-		subtraction 		  	  : out std_logic;
-		logical_shift_right    : out std_logic;
-		arithmetic_shift_right : out std_logic;
-		logical_shift_left  	  : out std_logic;
-		nand_operation         : out std_logic	
+		operation_a : out std_logic;
+		operation_b : out std_logic;
+		operation_c : out std_logic;
+		operation_d : out std_logic;
+		operation_e : out std_logic;
+		operation_f : out std_logic
 	);
 	
 end decoder;
@@ -35,20 +33,13 @@ begin
 	op1 <= operation_bits(1);
 	op0 <= operation_bits(0);
 
-	-- Decode the values for the incrementional operations
-	increment <= not(op2 or op1 or op0);
-	decrement <= not(op2 or op1) and op0;
+	-- Decode the values for operations, with 1 bit of t
+	operation_a <= op1;
+	operation_b <= op0;
+	operation_c <= op2;
+	operation_d <= op0;
+	operation_e <= op1;
+	operation_f <= op2;
 	
-	-- Decode the values for arithmetic operations
-	addition <= not(op2 or op0) and op1;
-	subtraction <= (not op2) and op1 and op0;
-	
-	-- Decode the values for shifting
-	logical_shift_right <= not(op1 or op0) and op2;
-	arithmetic_shift_right <= (not op1) and op2 and op0;
-	logical_shift_left <= (not op0) and op2 and op1;
-	
-	-- Decode the values for the nand operation
-	nand_operation <= op2 and op1 and op0;
 	
 end structural;
