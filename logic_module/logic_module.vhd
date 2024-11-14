@@ -100,6 +100,12 @@ architecture behavioral of logic_module is
 	-- Signal of nand_gate
 	signal out_nand_gate : std_logic_vector(3 downto 0);
 	
+	-- Signals for the mux of 4 inputs for the carries
+	signal out_mux_4inputs_carries 			  : std_logic_vector(3 downto 0);
+	signal carry_arithmetic_shift_right_4bit : std_logic_vector(3 downto 0);
+	signal carry_logical_shift_left_4bit     : std_logic_vector(3 downto 0);
+	signal carry_logical_shift_right_4bit    : std_logic_vector(3 downto 0);
+	
 begin
 
 	-- Instantiation of the logical_shift_right
@@ -159,7 +165,29 @@ begin
 			result => result
 		);
 		
-	carry_out <= carry_arithmetic_shift_right or carry_logical_shift_left or carry_logical_shift_right;	
 		
+	carry_logical_shift_left_4bit     <= '0'&'0'&'0'&carry_logical_shift_left;
+	carry_logical_shift_right_4bit    <= '0'&'0'&'0'&carry_logical_shift_right;
+	carry_arithmetic_shift_right_4bit <= '0'&'0'&'0'&carry_arithmetic_shift_right;
+	
+	-- Instantiation of the mux_4inputs for the carries, representing
+	-- the carry bits in 4bit forms
+	instance_mux_4inputs_carries : mux_4inputs
+	
+		port map (
+			A => carry_arithmetic_shift_right_4bit,
+			B => carry_logical_shift_left_4bit,
+			C => carry_logical_shift_right_4bit,
+			D => "0000",
+			
+			S0 => S0,
+			S1 => S1,
+			
+			result => out_mux_4inputs_carries
+		);
+		
+	-- Extract the first bit from the result
+	carry_out <= out_mux_4inputs_carries(0);
+				
 end behavioral;
 		

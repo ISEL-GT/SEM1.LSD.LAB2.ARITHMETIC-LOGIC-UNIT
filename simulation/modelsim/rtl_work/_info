@@ -23,9 +23,9 @@ VPcKVRO8a`2U6;9EEBc?M]3
 !s100 bzi`X7P^TodcNHYKD_>Zz2
 Z6 OV;C;2020.1;71
 31
-Z7 !s110 1731596385
+Z7 !s110 1731599759
 !i10b 1
-Z8 !s108 1731596385.000000
+Z8 !s108 1731599759.000000
 Z9 !s90 -reportprogress|300|-93|-work|work|C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/adder_subtractor_4bits.vhd|
 Z10 !s107 C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/adder_subtractor_4bits.vhd|
 !i113 1
@@ -51,7 +51,7 @@ R10
 R11
 R12
 Ealu
-Z13 w1731596307
+Z13 w1731596848
 R2
 R3
 !i122 15
@@ -64,9 +64,9 @@ V0IGZaOTk`O75cERfaDSn33
 !s100 lZijjTZA9h[Y6Y<:QcNAd1
 R6
 31
-Z16 !s110 1731596386
+Z16 !s110 1731599760
 !i10b 1
-Z17 !s108 1731596386.000000
+Z17 !s108 1731599760.000000
 Z18 !s90 -reportprogress|300|-93|-work|work|C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/alu.vhd|
 Z19 !s107 C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/alu.vhd|
 !i113 1
@@ -92,24 +92,24 @@ R19
 R11
 R12
 Earithmetic_shift_right
-Z20 w1731595443
+R13
 R2
 R3
 !i122 6
 R0
-Z21 8C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/arithmetic_shift_right.vhd
-Z22 FC:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/arithmetic_shift_right.vhd
+Z20 8C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/arithmetic_shift_right.vhd
+Z21 FC:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/arithmetic_shift_right.vhd
 l0
 L6 1
 VPhQ6=Mo>d0`[]V9AL7R_]2
 !s100 o:fAzdTG=Y:V8PXYTng]=1
 R6
 31
-Z23 !s110 1731596384
+Z22 !s110 1731599758
 !i10b 1
-Z24 !s108 1731596384.000000
-Z25 !s90 -reportprogress|300|-93|-work|work|C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/arithmetic_shift_right.vhd|
-Z26 !s107 C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/arithmetic_shift_right.vhd|
+Z23 !s108 1731599758.000000
+Z24 !s90 -reportprogress|300|-93|-work|work|C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/arithmetic_shift_right.vhd|
+Z25 !s107 C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/arithmetic_shift_right.vhd|
 !i113 1
 R11
 R12
@@ -119,16 +119,16 @@ R3
 DEx4 work 22 arithmetic_shift_right 0 22 PhQ6=Mo>d0`[]V9AL7R_]2
 !i122 6
 l18
-Z27 L17 11
+Z26 L17 11
 VHS2UM9V@LVUJGISKlDgl;2
 !s100 zeXlW`?J3m16_D^VbBHbh2
 R6
 31
-R23
+R22
 !i10b 1
+R23
 R24
 R25
-R26
 !i113 1
 R11
 R12
@@ -138,8 +138,8 @@ R2
 R3
 !i122 11
 R0
-Z28 8C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/arithmeticunit.vhd
-Z29 FC:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/arithmeticunit.vhd
+Z27 8C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/arithmeticunit.vhd
+Z28 FC:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/arithmeticunit.vhd
 l0
 L7 1
 VN>==iz5H`0oZH_Z7D[0Ba2
@@ -149,8 +149,8 @@ R6
 R7
 !i10b 1
 R8
-Z30 !s90 -reportprogress|300|-93|-work|work|C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/arithmeticunit.vhd|
-Z31 !s107 C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/arithmeticunit.vhd|
+Z29 !s90 -reportprogress|300|-93|-work|work|C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/arithmeticunit.vhd|
+Z30 !s107 C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/arithmeticunit.vhd|
 !i113 1
 R11
 R12
@@ -168,30 +168,30 @@ R6
 R7
 !i10b 1
 R8
+R29
 R30
-R31
 !i113 1
 R11
 R12
 Edecoder
-Z32 w1731589213
+Z31 w1731589213
 R2
 R3
 !i122 14
 R0
-Z33 8C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/decoder.vhd
-Z34 FC:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/decoder.vhd
+Z32 8C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/decoder.vhd
+Z33 FC:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/decoder.vhd
 l0
 L6 1
 V9;>nVYkXjM[C1Uh<Md?mG1
 !s100 <J96;<ARTzbcif3I@CK6[1
 R6
 31
-R16
+R7
 !i10b 1
 R8
-Z35 !s90 -reportprogress|300|-93|-work|work|C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/decoder.vhd|
-Z36 !s107 C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/decoder.vhd|
+Z34 !s90 -reportprogress|300|-93|-work|work|C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/decoder.vhd|
+Z35 !s107 C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/decoder.vhd|
 !i113 1
 R11
 R12
@@ -209,8 +209,8 @@ R6
 R16
 !i10b 1
 R8
+R34
 R35
-R36
 !i113 1
 R11
 R12
@@ -220,8 +220,8 @@ R2
 R3
 !i122 10
 R0
-Z37 8C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/flags.vhd
-Z38 FC:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/flags.vhd
+Z36 8C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/flags.vhd
+Z37 FC:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/flags.vhd
 l0
 L7 1
 VT<UMhVZ>3EDQFBY5e18FX3
@@ -231,8 +231,8 @@ R6
 R7
 !i10b 1
 R8
-Z39 !s90 -reportprogress|300|-93|-work|work|C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/flags.vhd|
-Z40 !s107 C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/flags.vhd|
+Z38 !s90 -reportprogress|300|-93|-work|work|C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/flags.vhd|
+Z39 !s107 C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/flags.vhd|
 !i113 1
 R11
 R12
@@ -250,19 +250,19 @@ R6
 R7
 !i10b 1
 R8
+R38
 R39
-R40
 !i113 1
 R11
 R12
 Eflags_main
-R20
+R13
 R2
 R3
 !i122 16
 R0
-Z41 8C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/flags/flags.vhd
-Z42 FC:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/flags/flags.vhd
+Z40 8C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/flags/flags.vhd
+Z41 FC:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/flags/flags.vhd
 l0
 L4 1
 V=hoHGmRZJ3:ZBMHNdn_L]0
@@ -272,7 +272,7 @@ R6
 R16
 !i10b 1
 R17
-Z43 !s90 -reportprogress|300|-93|-work|work|C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/flags/flags.vhd|
+Z42 !s90 -reportprogress|300|-93|-work|work|C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/flags/flags.vhd|
 !s107 C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/flags/flags.vhd|
 !i113 1
 R11
@@ -291,8 +291,8 @@ R6
 R16
 !i10b 1
 R17
-R43
-Z44 !s107 C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/flags/flags.vhd|
+R42
+Z43 !s107 C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/flags/flags.vhd|
 !i113 1
 R11
 R12
@@ -302,8 +302,8 @@ R2
 R3
 !i122 9
 R0
-Z45 8C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/full_adder.vhd
-Z46 FC:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/full_adder.vhd
+Z44 8C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/full_adder.vhd
+Z45 FC:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/full_adder.vhd
 l0
 L6 1
 VOUO;gSf6dhQn3OzTm4LMf0
@@ -313,8 +313,8 @@ R6
 R7
 !i10b 1
 R8
-Z47 !s90 -reportprogress|300|-93|-work|work|C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/full_adder.vhd|
-Z48 !s107 C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/full_adder.vhd|
+Z46 !s90 -reportprogress|300|-93|-work|work|C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/full_adder.vhd|
+Z47 !s107 C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/full_adder.vhd|
 !i113 1
 R11
 R12
@@ -332,8 +332,8 @@ R6
 R7
 !i10b 1
 R8
+R46
 R47
-R48
 !i113 1
 R11
 R12
@@ -343,19 +343,19 @@ R2
 R3
 !i122 8
 R0
-Z49 8C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/half_adder.vhd
-Z50 FC:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/half_adder.vhd
+Z48 8C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/half_adder.vhd
+Z49 FC:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/half_adder.vhd
 l0
 L6 1
 V5A9:A6@gTm<DI]fd`6C]a0
 !s100 Rk8Y58EMd:CVUb@^SRGL80
 R6
 31
-R7
+R22
 !i10b 1
-R8
-Z51 !s90 -reportprogress|300|-93|-work|work|C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/half_adder.vhd|
-Z52 !s107 C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/half_adder.vhd|
+R23
+Z50 !s90 -reportprogress|300|-93|-work|work|C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/half_adder.vhd|
+Z51 !s107 C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/half_adder.vhd|
 !i113 1
 R11
 R12
@@ -370,11 +370,11 @@ VOKl2J4OG^IT6:^ZgO^PU^0
 !s100 2z3oh;BXC]Z95ZCXV:U:T1
 R6
 31
-R7
+R22
 !i10b 1
-R8
+R23
+R50
 R51
-R52
 !i113 1
 R11
 R12
@@ -384,19 +384,19 @@ R2
 R3
 !i122 7
 R0
-Z53 8C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/inner_arithmetic.vhd
-Z54 FC:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/inner_arithmetic.vhd
+Z52 8C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/inner_arithmetic.vhd
+Z53 FC:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/inner_arithmetic.vhd
 l0
 L7 1
 VVlgN2e[17f8gLzbbC[VO]2
 !s100 OXDlolz5L^Wg8VUS;3zR<2
 R6
 31
-R23
+R22
 !i10b 1
-R24
-Z55 !s90 -reportprogress|300|-93|-work|work|C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/inner_arithmetic.vhd|
-Z56 !s107 C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/inner_arithmetic.vhd|
+R23
+Z54 !s90 -reportprogress|300|-93|-work|work|C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/inner_arithmetic.vhd|
+Z55 !s107 C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/inner_arithmetic.vhd|
 !i113 1
 R11
 R12
@@ -411,16 +411,16 @@ VXRmf0^KO48b:iSY8@60eU3
 !s100 FGJ>:1_mm7AEG4VzSj]z60
 R6
 31
-R23
+R22
 !i10b 1
-R24
+R23
+R54
 R55
-R56
 !i113 1
 R11
 R12
 Elogic_module
-R20
+Z56 w1731599655
 R2
 R3
 !i122 5
@@ -433,9 +433,9 @@ V6]@N1[H83T6:Ro:zCO=E]3
 !s100 Jc73mK6]FS:P4=9o@RTZn1
 R6
 31
-R23
+R22
 !i10b 1
-R24
+R23
 Z59 !s90 -reportprogress|300|-93|-work|work|C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/logic_module.vhd|
 Z60 !s107 C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/logic_module.vhd|
 !i113 1
@@ -446,22 +446,22 @@ R2
 R3
 DEx4 work 12 logic_module 0 22 6]@N1[H83T6:Ro:zCO=E]3
 !i122 5
-l103
-L21 144
-V>:L4OO`c^eQY0QKPnnUWh3
-!s100 NhTZ^;JPa[eJMgUJ7<?7R2
+l109
+L21 172
+V0j8bYDVz=CM7B0AbZhZ3:0
+!s100 D]m@7<zzVFBZbBg@e8]ES1
 R6
 31
-R23
+R22
 !i10b 1
-R24
+R23
 R59
 R60
 !i113 1
 R11
 R12
 Elogical_shift_left
-R20
+R13
 R2
 R3
 !i122 4
@@ -474,9 +474,9 @@ V>JJIinEc575<W<SYDO_?m3
 !s100 UEic2AQ[bUh0<6f5P27551
 R6
 31
-R23
+R22
 !i10b 1
-R24
+R23
 Z63 !s90 -reportprogress|300|-93|-work|work|C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/logical_shift_left.vhd|
 Z64 !s107 C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/logical_shift_left.vhd|
 !i113 1
@@ -488,21 +488,21 @@ R3
 DEx4 work 18 logical_shift_left 0 22 >JJIinEc575<W<SYDO_?m3
 !i122 4
 l18
-R27
+R26
 VkUl9eXo@N<>9`eaIW5ABB3
 !s100 E5R0c8:a@U288mT1bPa^F0
 R6
 31
-R23
+R22
 !i10b 1
-R24
+R23
 R63
 R64
 !i113 1
 R11
 R12
 Elogical_shift_right
-R20
+R13
 R2
 R3
 !i122 3
@@ -515,9 +515,9 @@ VG=PASAcGZk`k<RNYPUGf=2
 !s100 k;nTUlO>LRVzB^8Zca<N13
 R6
 31
-R23
+R22
 !i10b 1
-R24
+R23
 Z67 !s90 -reportprogress|300|-93|-work|work|C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/logical_shift_right.vhd|
 Z68 !s107 C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/logical_shift_right.vhd|
 !i113 1
@@ -534,22 +534,22 @@ VT[2cmnd37>Xj1cGV^hEzR0
 !s100 0zV3oMkehE3NNC2l2cD2O0
 R6
 31
-R23
+R22
 !i10b 1
-R24
+R23
 R67
 R68
 !i113 1
 R11
 R12
 Emux_2inputs
-Z69 w1731595759
+R13
 R2
 R3
 !i122 13
 R0
-Z70 8C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/mux_2inputs.vhd
-Z71 FC:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/mux_2inputs.vhd
+Z69 8C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/mux_2inputs.vhd
+Z70 FC:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/mux_2inputs.vhd
 l0
 L6 1
 VPN]5;^_m3GG1WQ>;CDie[2
@@ -559,8 +559,8 @@ R6
 R7
 !i10b 1
 R8
-Z72 !s90 -reportprogress|300|-93|-work|work|C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/mux_2inputs.vhd|
-Z73 !s107 C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/mux_2inputs.vhd|
+Z71 !s90 -reportprogress|300|-93|-work|work|C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/mux_2inputs.vhd|
+Z72 !s107 C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/mux_2inputs.vhd|
 !i113 1
 R11
 R12
@@ -578,13 +578,13 @@ R6
 R7
 !i10b 1
 R8
+R71
 R72
-R73
 !i113 1
 R11
 R12
 Emux_4inputs
-R20
+Z73 w1731598860
 R2
 R3
 !i122 2
@@ -597,11 +597,11 @@ V_TFAhh:X0>4dRO59`dc4N1
 !s100 edD6=?l3zOzC9VNdZijE30
 R6
 31
-R23
+Z76 !s110 1731599757
 !i10b 1
-R24
-Z76 !s90 -reportprogress|300|-93|-work|work|C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/mux_4inputs.vhd|
-Z77 !s107 C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/mux_4inputs.vhd|
+Z77 !s108 1731599757.000000
+Z78 !s90 -reportprogress|300|-93|-work|work|C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/mux_4inputs.vhd|
+Z79 !s107 C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/mux_4inputs.vhd|
 !i113 1
 R11
 R12
@@ -612,37 +612,37 @@ DEx4 work 11 mux_4inputs 0 22 _TFAhh:X0>4dRO59`dc4N1
 !i122 2
 l36
 L24 27
-VZ[I1b7fl;@T@Sg<Pz1;Me0
-!s100 ^^l_T^4ScGhVaTUiEYbK83
+V<Pk<3FV;mjJkDb5dzI?nk2
+!s100 HXcGCNRPWffSMjGo]`JA?3
 R6
 31
-R23
-!i10b 1
-R24
 R76
+!i10b 1
 R77
+R78
+R79
 !i113 1
 R11
 R12
 Enand_gate
-R20
+R13
 R2
 R3
 !i122 1
 R0
-Z78 8C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/nand_gate.vhd
-Z79 FC:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/nand_gate.vhd
+Z80 8C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/nand_gate.vhd
+Z81 FC:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/nand_gate.vhd
 l0
 L5 1
 Vb8jB^LdO>fNJgbUnL;[C[0
 !s100 i20MiaQf1MWgIPS9m70FB2
 R6
 31
-R23
+R76
 !i10b 1
-Z80 !s108 1731596383.000000
-Z81 !s90 -reportprogress|300|-93|-work|work|C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/nand_gate.vhd|
-Z82 !s107 C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/nand_gate.vhd|
+R77
+Z82 !s90 -reportprogress|300|-93|-work|work|C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/nand_gate.vhd|
+Z83 !s107 C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/nand_gate.vhd|
 !i113 1
 R11
 R12
@@ -657,31 +657,31 @@ VPAZgOldARej7ec4?KJ:S<3
 !s100 >N@fCEak2NVP320l>N4P32
 R6
 31
-R23
+R76
 !i10b 1
-R80
-R81
+R77
 R82
+R83
 !i113 1
 R11
 R12
 Eodd_parity_checker
-Z83 w1731591818
+Z84 w1731591818
 R2
 R3
 !i122 0
 R0
-Z84 8C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/flags/odd_parity_checker.vhd
-Z85 FC:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/flags/odd_parity_checker.vhd
+Z85 8C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/flags/odd_parity_checker.vhd
+Z86 FC:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/flags/odd_parity_checker.vhd
 l0
 L5 1
 Vd5Q2ei52mC_CShBFb2d4H0
 !s100 bLOKDc2XloBVRg4g@aj0j1
 R6
 31
-Z86 !s110 1731596383
+R76
 !i10b 1
-R80
+R77
 Z87 !s90 -reportprogress|300|-93|-work|work|C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/flags/odd_parity_checker.vhd|
 Z88 !s107 C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/flags/odd_parity_checker.vhd|
 !i113 1
@@ -698,9 +698,9 @@ VgUzY7A;jO40mhe?_B_HVo0
 !s100 FNb;dof]`_9^mO8lLcRSK1
 R6
 31
-R86
+R76
 !i10b 1
-R80
+R77
 R87
 R88
 !i113 1

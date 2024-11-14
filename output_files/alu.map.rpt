@@ -1,5 +1,5 @@
 Analysis & Synthesis report for alu
-Thu Nov 14 14:58:47 2024
+Thu Nov 14 15:54:54 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -14,10 +14,11 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Port Connectivity Checks: "mux_2inputs:instance_yor"
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  9. Port Connectivity Checks: "logic_module:instance_logic_module|mux_4inputs:instance_mux_4inputs_carries"
+ 10. Port Connectivity Checks: "mux_2inputs:instance_yor"
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -44,7 +45,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov 14 14:58:47 2024       ;
+; Analysis & Synthesis Status        ; Successful - Thu Nov 14 15:54:54 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; alu                                         ;
 ; Top-level Entity Name              ; alu                                         ;
@@ -199,8 +200,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                       ;
 ; Total combinational functions               ; 31                    ;
 ; Logic element usage by number of LUT inputs ;                       ;
-;     -- 4 input functions                    ; 24                    ;
-;     -- 3 input functions                    ; 3                     ;
+;     -- 4 input functions                    ; 25                    ;
+;     -- 3 input functions                    ; 2                     ;
 ;     -- <=2 input functions                  ; 4                     ;
 ;                                             ;                       ;
 ; Logic elements by mode                      ;                       ;
@@ -217,8 +218,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                       ;
 ; Maximum fan-out node                        ; operation_bit_0~input ;
 ; Maximum fan-out                             ; 15                    ;
-; Total fan-out                               ; 145                   ;
-; Average fan-out                             ; 1.93                  ;
+; Total fan-out                               ; 146                   ;
+; Average fan-out                             ; 1.95                  ;
 +---------------------------------------------+-----------------------+
 
 
@@ -262,6 +263,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "logic_module:instance_logic_module|mux_4inputs:instance_mux_4inputs_carries"                ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; a[3..1]      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; b[3..1]      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; c[3..1]      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; d            ; Input  ; Info     ; Stuck at GND                                                                        ;
+; result[3..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +------------------------------------------------------+
 ; Port Connectivity Checks: "mux_2inputs:instance_yor" ;
 +------+-------+----------+----------------------------+
@@ -281,11 +295,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;     normal            ; 33                          ;
 ;         1 data inputs ; 2                           ;
 ;         2 data inputs ; 4                           ;
-;         3 data inputs ; 3                           ;
-;         4 data inputs ; 24                          ;
+;         3 data inputs ; 2                           ;
+;         4 data inputs ; 25                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 7.00                        ;
-; Average LUT depth     ; 5.49                        ;
+; Average LUT depth     ; 5.64                        ;
 +-----------------------+-----------------------------+
 
 
@@ -304,7 +318,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Nov 14 14:58:32 2024
+    Info: Processing started: Thu Nov 14 15:54:35 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alu -c alu
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -369,11 +383,11 @@ Info (12128): Elaborating entity "full_adder" for hierarchy "arithmeticunit:inst
 Info (12128): Elaborating entity "half_adder" for hierarchy "arithmeticunit:instance_arithmetic_unit|inner_arithmetic:instance_inner_arithmetic|adder_subtractor_4bits:instance_adder_subtractor_4bits|full_adder:instance_full_adder_1|half_adder:instance_half_adder_1" File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/full_adder.vhd Line: 48
 Info (12128): Elaborating entity "flags" for hierarchy "arithmeticunit:instance_arithmetic_unit|flags:instance_flags" File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/arithmeticunit.vhd Line: 88
 Info (12128): Elaborating entity "logic_module" for hierarchy "logic_module:instance_logic_module" File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/alu.vhd Line: 180
-Info (12128): Elaborating entity "logical_shift_right" for hierarchy "logic_module:instance_logic_module|logical_shift_right:instance_logical_shift_right" File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/logic_module.vhd Line: 106
-Info (12128): Elaborating entity "arithmetic_shift_right" for hierarchy "logic_module:instance_logic_module|arithmetic_shift_right:instance_arithmetic_shift_right" File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/logic_module.vhd Line: 116
-Info (12128): Elaborating entity "logical_shift_left" for hierarchy "logic_module:instance_logic_module|logical_shift_left:instance_logical_shift_left" File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/logic_module.vhd Line: 127
-Info (12128): Elaborating entity "nand_gate" for hierarchy "logic_module:instance_logic_module|nand_gate:instance_logical_nand_gate" File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/logic_module.vhd Line: 137
-Info (12128): Elaborating entity "mux_4inputs" for hierarchy "logic_module:instance_logic_module|mux_4inputs:instance_mux_4inputs" File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/logic_module.vhd Line: 148
+Info (12128): Elaborating entity "logical_shift_right" for hierarchy "logic_module:instance_logic_module|logical_shift_right:instance_logical_shift_right" File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/logic_module.vhd Line: 112
+Info (12128): Elaborating entity "arithmetic_shift_right" for hierarchy "logic_module:instance_logic_module|arithmetic_shift_right:instance_arithmetic_shift_right" File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/logic_module.vhd Line: 122
+Info (12128): Elaborating entity "logical_shift_left" for hierarchy "logic_module:instance_logic_module|logical_shift_left:instance_logical_shift_left" File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/logic_module.vhd Line: 133
+Info (12128): Elaborating entity "nand_gate" for hierarchy "logic_module:instance_logic_module|nand_gate:instance_logical_nand_gate" File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/logic_module.vhd Line: 143
+Info (12128): Elaborating entity "mux_4inputs" for hierarchy "logic_module:instance_logic_module|mux_4inputs:instance_mux_4inputs" File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/logic_module.vhd Line: 154
 Info (12128): Elaborating entity "flags_main" for hierarchy "flags_main:instance_flags" File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/alu.vhd Line: 207
 Info (12128): Elaborating entity "odd_parity_checker" for hierarchy "flags_main:instance_flags|odd_parity_checker:instance_odd_parity_checker" File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/flags/flags.vhd Line: 45
 Info (286030): Timing-Driven Synthesis is running
@@ -384,9 +398,9 @@ Info (21057): Implemented 53 device resources after synthesis - the final resour
     Info (21059): Implemented 10 output pins
     Info (21061): Implemented 31 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4787 megabytes
-    Info: Processing ended: Thu Nov 14 14:58:47 2024
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:18
+    Info: Peak virtual memory: 4789 megabytes
+    Info: Processing ended: Thu Nov 14 15:54:54 2024
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:25
 
 
