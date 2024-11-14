@@ -13,7 +13,7 @@ entity mux_4inputs is
 	 D : in std_logic_vector(3 downto 0);	 
 	 
 	 S1 : in std_logic_vector(1 downto 0);
-	 S2: in std_logic_vector(1 downto 0);
+	 S2 : in std_logic_vector(1 downto 0);
 
 	 result : out std_logic_vector (3 downto 0) 
  );

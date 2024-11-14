@@ -30,8 +30,8 @@ architecture behavioral of logic_module is
 	
 	end component;
 	
-	-- Import of the aritmetic_shift_right circuit
-	component aritmetic_shift_right
+	-- Import of the arithmetic_shift_right circuit
+	component arithmetic_shift_right
 	
 		port (
 			input : in std_logic_vector(3 downto 0);
@@ -87,9 +87,9 @@ architecture behavioral of logic_module is
 	signal out_logical_shift_right in std_logic_vector(3 downto 0);
 	signal carry_logical_shift_right in std_logic
 	
-	-- Signal of aritmetic_shift_right
-	signal out_aritmetic_shift_right in std_logic_vector(3 downto 0);
-	signal carry_aritmetic_shift_right in std_logic
+	-- Signal of arithmetic_shift_right
+	signal out_arithmetic_shift_right in std_logic_vector(3 downto 0);
+	signal carry_arihtmetic_shift_right in std_logic
 	
 	-- Signal of logical_shift_left
 	signal out_logical_shift_left in std_logic_vector(3 downto 0);
@@ -110,14 +110,14 @@ begin
 			carry_out => carry_logical_shift_right
 		);
 				
-	-- Instantiation of the aritmetic_shift_right
-	instance_aritmetic_shift_right : aritmetic_shift_right
+	-- Instantiation of the arithmetic_shift_right
+	instance_arithmetic_shift_right : arithmetic_shift_right
 	
 		port map (
 			input => A,
 			
-			result 	 => out_aritmetic_shift_right,
-			carry_out => carry_aritmetic_shift_right
+			result 	 => out_arithmetic_shift_right,
+			carry_out => carry_arihtmetic_shift_right
 		);
 		
 		
@@ -147,7 +147,7 @@ begin
 	
 		port map (
 			A => out_logical_shift_right,
-			B => out_aritmetic_shift_right,
+			B => out_arithmetic_shift_right,
 			C => out_logical_shift_left,
 			D => out_nand_gate,
 			
@@ -157,7 +157,7 @@ begin
 			result => result
 		);
 		
-	carry_out <= carry_aritmetic_shift_right or carry_logical_shift_left or carry_logical_shift_right;	
+	carry_out <= carry_arithmetic_shift_right or carry_logical_shift_left or carry_logical_shift_right;	
 		
 end behavioral;
 		
