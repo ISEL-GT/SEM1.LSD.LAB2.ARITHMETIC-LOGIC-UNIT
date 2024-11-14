@@ -10,7 +10,7 @@ entity mux_2inputs is
 	 A : in std_logic_vector(3 downto 0);
 	 B : in std_logic_vector(3 downto 0); 
 
-	 selector : in std_logic;
+	 selector : in std_logic_vector(1 downto 0);
 
 	 result : out std_logic_vector (3 downto 0) 
  );
@@ -19,7 +19,7 @@ end mux_2inputs;
 
 
 -- Implements the logic of a MUX with two inputs and one selector
-architecture structural of mux_2inputs
+architecture structural of mux_4inputs
 begin
 	
 	result <= (A and selector) or (B and (not selector))
