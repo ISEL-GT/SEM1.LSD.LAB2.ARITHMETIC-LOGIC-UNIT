@@ -23,5 +23,7 @@
 hs_err_pid*
 replay_pid*
 
-/db/*
-/output_files/*
+/db/
+/output_files/
+/incremental_db/
+/simulation/

@@ -41,8 +41,8 @@ begin
 	S14bit <= S1 & S1 & S1 & S1;
 	
 	path_A <= A and (not S04bit) and (not S14bit);
-	path_B <= B and (not S04bit) and S14bit;
-	path_C <= C and S04bit and (not S14bit);
+	path_B <= B and S04bit and (not S14bit);
+	path_C <= C and (not S04bit) and S14bit;
 	path_D <= D and S04bit and S14bit;
 	
 	result <= path_A or path_B or path_C or path_D;
