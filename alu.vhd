@@ -8,9 +8,7 @@ entity alu is
 	port (
 		X    				  : in std_logic_vector(3 downto 0);
 		Y	  				  : in std_logic_vector(3 downto 0);
-		operation_bit_0  : in std_logic;
-		operation_bit_1  : in std_logic;
-		operation_bit_2  : in std_logic;
+		operation_bits   : in std_logic_vector(2 downto 0);
 		carry_borrow_in  : in std_logic; 
 		
 		result 			  : out std_logic_vector(3 downto 0);
@@ -135,9 +133,9 @@ begin
 	instance_decoder : decoder	
 		
 		port map (
-			operation_bit_2 => operation_bit_2,
-			operation_bit_1 => operation_bit_1,
-			operation_bit_0 => operation_bit_0,
+			operation_bit_2 => operation_bits(2),
+			operation_bit_1 => operation_bits(1),
+			operation_bit_0 => operation_bits(0),
 			
 			operation_a => operation_a,
 			operation_b => operation_b,

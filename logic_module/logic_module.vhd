@@ -85,6 +85,23 @@ architecture behavioral of logic_module is
 		
 	end component;
 	
+	-- Import of the mux_3inputs circuit 
+	component mux_3inputs
+	
+		port (
+			A : in std_logic;
+			B : in std_logic;
+			C : in std_logic;
+		 
+			S0 : in std_logic;
+			S1 : in std_logic;
+
+			result : out std_logic
+		);
+		
+	end component;
+	
+	
 	-- Signal of logical_shift_right
 	signal out_logical_shift_right : std_logic_vector(3 downto 0);
 	signal carry_logical_shift_right : std_logic;
@@ -101,10 +118,7 @@ architecture behavioral of logic_module is
 	signal out_nand_gate : std_logic_vector(3 downto 0);
 	
 	-- Signals for the mux of 4 inputs for the carries
-	signal out_mux_4inputs_carries 			  : std_logic_vector(3 downto 0);
-	signal carry_arithmetic_shift_right_4bit : std_logic_vector(3 downto 0);
-	signal carry_logical_shift_left_4bit     : std_logic_vector(3 downto 0);
-	signal carry_logical_shift_right_4bit    : std_logic_vector(3 downto 0);
+	signal out_mux_3inputs_carries : std_logic;
 	
 begin
 
@@ -139,6 +153,7 @@ begin
 			carry_out => carry_logical_shift_left
 		);
 		
+		
 	-- Instantiation of the nand_gate
 	instance_logical_nand_gate : nand_gate
 	
@@ -149,6 +164,7 @@ begin
 			result => out_nand_gate
 			
 		);
+		
 		
 	-- Instantiation of the mux_4inputs
 	instance_mux_4inputs : mux_4inputs
@@ -164,30 +180,24 @@ begin
 			
 			result => result
 		);
-		
-		
-	carry_logical_shift_left_4bit     <= '0'&'0'&'0'&carry_logical_shift_left;
-	carry_logical_shift_right_4bit    <= '0'&'0'&'0'&carry_logical_shift_right;
-	carry_arithmetic_shift_right_4bit <= '0'&'0'&'0'&carry_arithmetic_shift_right;
 	
-	-- Instantiation of the mux_4inputs for the carries, representing
-	-- the carry bits in 4bit forms
-	instance_mux_4inputs_carries : mux_4inputs
+	-- Instantiation of the mux_3inputs for the carries, representing
+	-- the carry bits in 3bit forms
+	instance_mux_3inputs : mux_3inputs
 	
 		port map (
-			A => carry_arithmetic_shift_right_4bit,
-			B => carry_logical_shift_left_4bit,
-			C => carry_logical_shift_right_4bit,
-			D => "0000",
+			A => carry_logical_shift_right,
+			B => carry_arithmetic_shift_right,
+			C => carry_logical_shift_left,
 			
 			S0 => S0,
 			S1 => S1,
 			
-			result => out_mux_4inputs_carries
+			result => out_mux_3inputs_carries
 		);
 		
 	-- Extract the first bit from the result
-	carry_out <= out_mux_4inputs_carries(0);
+	carry_out <= out_mux_3inputs_carries;
 				
 end behavioral;
 		
