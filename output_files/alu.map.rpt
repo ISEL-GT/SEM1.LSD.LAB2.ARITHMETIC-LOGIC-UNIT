@@ -1,5 +1,5 @@
-Analysis & Synthesis report for alu
-Wed Nov 13 15:56:05 2024
+Analysis & Elaboration report for alu
+Thu Nov 14 14:33:28 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -7,10 +7,11 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration Settings
+  5. Port Connectivity Checks: "mux_2inputs:instance_yor"
+  6. Analysis & Elaboration Messages
 
 
 
@@ -35,9 +36,9 @@ https://fpgasoftware.intel.com/eula.
 
 
 +----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
+; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Wed Nov 13 15:56:05 2024           ;
+; Analysis & Elaboration Status      ; Successful - Thu Nov 14 14:33:28 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; alu                                         ;
 ; Top-level Entity Name              ; alu                                         ;
@@ -56,8 +57,24 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------+---------------------------------------------+
 
 
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
 +------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                              ;
+; Analysis & Elaboration Settings                                                                            ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
@@ -142,62 +159,97 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 32          ;
-; Maximum allowed            ; 16          ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
++------------------------------------------------------+
+; Port Connectivity Checks: "mux_2inputs:instance_yor" ;
++------+-------+----------+----------------------------+
+; Port ; Type  ; Severity ; Details                    ;
++------+-------+----------+----------------------------+
+; b    ; Input ; Info     ; Stuck at GND               ;
++------+-------+----------+----------------------------+
 
 
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
+Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Nov 13 15:56:00 2024
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alu -c alu
+    Info: Processing started: Thu Nov 14 14:33:15 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alu -c alu --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 24 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file inner_arithmetic.vhd
-    Info (12022): Found design unit 1: inner_arithmetic-behavioral File: C:/Isel/1Semestre/LSD/AV/AV_LAB2/inner_arithmetic.vhd Line: 23
-    Info (12023): Found entity 1: inner_arithmetic File: C:/Isel/1Semestre/LSD/AV/AV_LAB2/inner_arithmetic.vhd Line: 7
-Info (12021): Found 2 design units, including 1 entities, in source file half_adder.vhd
-    Info (12022): Found design unit 1: half_adder-structural File: C:/Isel/1Semestre/LSD/AV/AV_LAB2/half_adder.vhd Line: 19
-    Info (12023): Found entity 1: half_adder File: C:/Isel/1Semestre/LSD/AV/AV_LAB2/half_adder.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file full_adder.vhd
-    Info (12022): Found design unit 1: full_adder-behavioral File: C:/Isel/1Semestre/LSD/AV/AV_LAB2/full_adder.vhd Line: 21
-    Info (12023): Found entity 1: full_adder File: C:/Isel/1Semestre/LSD/AV/AV_LAB2/full_adder.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file flags.vhd
-    Info (12022): Found design unit 1: flags-behavioral File: C:/Isel/1Semestre/LSD/AV/AV_LAB2/flags.vhd Line: 27
-    Info (12023): Found entity 1: flags File: C:/Isel/1Semestre/LSD/AV/AV_LAB2/flags.vhd Line: 7
-Info (12021): Found 2 design units, including 1 entities, in source file arithmeticunit.vhd
-    Info (12022): Found design unit 1: arithmeticunit-behavioral File: C:/Isel/1Semestre/LSD/AV/AV_LAB2/arithmeticunit.vhd Line: 24
-    Info (12023): Found entity 1: arithmeticunit File: C:/Isel/1Semestre/LSD/AV/AV_LAB2/arithmeticunit.vhd Line: 7
-Info (12021): Found 1 design units, including 1 entities, in source file alu.vhd
-    Info (12023): Found entity 1: alu File: C:/Isel/1Semestre/LSD/AV/AV_LAB2/alu.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file adder_subtractor_4bits.vhd
-    Info (12022): Found design unit 1: adder_subtractor_4bits-behavioral File: C:/Isel/1Semestre/LSD/AV/AV_LAB2/adder_subtractor_4bits.vhd Line: 22
-    Info (12023): Found entity 1: adder_subtractor_4bits File: C:/Isel/1Semestre/LSD/AV/AV_LAB2/adder_subtractor_4bits.vhd Line: 7
-Info (12021): Found 2 design units, including 1 entities, in source file aritmetic_shift_right.vhd
-    Info (12022): Found design unit 1: arithmetic_shift_right-behavioral File: C:/Isel/1Semestre/LSD/AV/AV_LAB2/aritmetic_shift_right.vhd Line: 17
-    Info (12023): Found entity 1: arithmetic_shift_right File: C:/Isel/1Semestre/LSD/AV/AV_LAB2/aritmetic_shift_right.vhd Line: 6
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file flags/odd_parity_checker.vhd
+    Info (12022): Found design unit 1: odd_parity_checker-structural File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/flags/odd_parity_checker.vhd Line: 20
+    Info (12023): Found entity 1: odd_parity_checker File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/flags/odd_parity_checker.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file logic_module/nand_gate.vhd
+    Info (12022): Found design unit 1: nand_gate-structural File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/nand_gate.vhd Line: 16
+    Info (12023): Found entity 1: nand_gate File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/nand_gate.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file logic_module/mux_4inputs.vhd
+    Info (12022): Found design unit 1: mux_4inputs-structural File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/mux_4inputs.vhd Line: 24
+    Info (12023): Found entity 1: mux_4inputs File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/mux_4inputs.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file logic_module/logical_shift_right.vhd
+    Info (12022): Found design unit 1: logical_shift_right-structural File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/logical_shift_right.vhd Line: 19
+    Info (12023): Found entity 1: logical_shift_right File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/logical_shift_right.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file logic_module/logical_shift_left.vhd
+    Info (12022): Found design unit 1: logical_shift_left-structural File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/logical_shift_left.vhd Line: 17
+    Info (12023): Found entity 1: logical_shift_left File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/logical_shift_left.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file logic_module/logic_module.vhd
+    Info (12022): Found design unit 1: logic_module-behavioral File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/logic_module.vhd Line: 21
+    Info (12023): Found entity 1: logic_module File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/logic_module.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file logic_module/arithmetic_shift_right.vhd
+    Info (12022): Found design unit 1: arithmetic_shift_right-structural File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/arithmetic_shift_right.vhd Line: 17
+    Info (12023): Found entity 1: arithmetic_shift_right File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/arithmetic_shift_right.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file arithmetic_unit/inner_arithmetic.vhd
+    Info (12022): Found design unit 1: inner_arithmetic-behavioral File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/inner_arithmetic.vhd Line: 23
+    Info (12023): Found entity 1: inner_arithmetic File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/inner_arithmetic.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file arithmetic_unit/half_adder.vhd
+    Info (12022): Found design unit 1: half_adder-structural File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/half_adder.vhd Line: 19
+    Info (12023): Found entity 1: half_adder File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/half_adder.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file arithmetic_unit/full_adder.vhd
+    Info (12022): Found design unit 1: full_adder-behavioral File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/full_adder.vhd Line: 21
+    Info (12023): Found entity 1: full_adder File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/full_adder.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file arithmetic_unit/flags.vhd
+    Info (12022): Found design unit 1: flags-behavioral File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/flags.vhd Line: 27
+    Info (12023): Found entity 1: flags File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/flags.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file arithmetic_unit/arithmeticunit.vhd
+    Info (12022): Found design unit 1: arithmeticunit-behavioral File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/arithmeticunit.vhd Line: 24
+    Info (12023): Found entity 1: arithmeticunit File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/arithmeticunit.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file arithmetic_unit/adder_subtractor_4bits.vhd
+    Info (12022): Found design unit 1: adder_subtractor_4bits-behavioral File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/adder_subtractor_4bits.vhd Line: 22
+    Info (12023): Found entity 1: adder_subtractor_4bits File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/adder_subtractor_4bits.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file mux_2inputs.vhd
+    Info (12022): Found design unit 1: mux_2inputs-structural File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/mux_2inputs.vhd Line: 21
+    Info (12023): Found entity 1: mux_2inputs File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/mux_2inputs.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file decoder.vhd
+    Info (12022): Found design unit 1: decoder-structural File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/decoder.vhd Line: 24
+    Info (12023): Found entity 1: decoder File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/decoder.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
+    Info (12022): Found design unit 1: alu-behavioral File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/alu.vhd Line: 28
+    Info (12023): Found entity 1: alu File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/alu.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file flags/flags.vhd
+    Info (12022): Found design unit 1: flags_main-behavioral File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/flags/flags.vhd Line: 23
+    Info (12023): Found entity 1: flags_main File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/flags/flags.vhd Line: 4
 Info (12127): Elaborating entity "alu" for the top level hierarchy
-Error (10793): VHDL error at alu.vhd(5): entity alu does not have an architecture File: C:/Isel/1Semestre/LSD/AV/AV_LAB2/alu.vhd Line: 5
-Error (12153): Can't elaborate top-level user hierarchy
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 1 warning
-    Error: Peak virtual memory: 4772 megabytes
-    Error: Processing ended: Wed Nov 13 15:56:05 2024
-    Error: Elapsed time: 00:00:05
-    Error: Total CPU time (on all processors): 00:00:04
+Info (12128): Elaborating entity "decoder" for hierarchy "decoder:instance_decoder" File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/alu.vhd Line: 135
+Info (12128): Elaborating entity "mux_2inputs" for hierarchy "mux_2inputs:instance_yor" File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/alu.vhd Line: 152
+Info (12128): Elaborating entity "arithmeticunit" for hierarchy "arithmeticunit:instance_arithmetic_unit" File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/alu.vhd Line: 164
+Info (12128): Elaborating entity "inner_arithmetic" for hierarchy "arithmeticunit:instance_arithmetic_unit|inner_arithmetic:instance_inner_arithmetic" File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/arithmeticunit.vhd Line: 72
+Info (12128): Elaborating entity "adder_subtractor_4bits" for hierarchy "arithmeticunit:instance_arithmetic_unit|inner_arithmetic:instance_inner_arithmetic|adder_subtractor_4bits:instance_adder_subtractor_4bits" File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/inner_arithmetic.vhd Line: 55
+Info (12128): Elaborating entity "full_adder" for hierarchy "arithmeticunit:instance_arithmetic_unit|inner_arithmetic:instance_inner_arithmetic|adder_subtractor_4bits:instance_adder_subtractor_4bits|full_adder:instance_full_adder_1" File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/adder_subtractor_4bits.vhd Line: 53
+Info (12128): Elaborating entity "half_adder" for hierarchy "arithmeticunit:instance_arithmetic_unit|inner_arithmetic:instance_inner_arithmetic|adder_subtractor_4bits:instance_adder_subtractor_4bits|full_adder:instance_full_adder_1|half_adder:instance_half_adder_1" File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/full_adder.vhd Line: 48
+Info (12128): Elaborating entity "flags" for hierarchy "arithmeticunit:instance_arithmetic_unit|flags:instance_flags" File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/arithmetic_unit/arithmeticunit.vhd Line: 88
+Info (12128): Elaborating entity "logic_module" for hierarchy "logic_module:instance_logic_module" File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/alu.vhd Line: 180
+Info (12128): Elaborating entity "logical_shift_right" for hierarchy "logic_module:instance_logic_module|logical_shift_right:instance_logical_shift_right" File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/logic_module.vhd Line: 106
+Info (12128): Elaborating entity "arithmetic_shift_right" for hierarchy "logic_module:instance_logic_module|arithmetic_shift_right:instance_arithmetic_shift_right" File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/logic_module.vhd Line: 116
+Info (12128): Elaborating entity "logical_shift_left" for hierarchy "logic_module:instance_logic_module|logical_shift_left:instance_logical_shift_left" File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/logic_module.vhd Line: 127
+Info (12128): Elaborating entity "nand_gate" for hierarchy "logic_module:instance_logic_module|nand_gate:instance_logical_nand_gate" File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/logic_module.vhd Line: 137
+Info (12128): Elaborating entity "mux_4inputs" for hierarchy "logic_module:instance_logic_module|mux_4inputs:instance_mux_4inputs" File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/logic_module/logic_module.vhd Line: 148
+Info (12128): Elaborating entity "flags_main" for hierarchy "flags_main:instance_flags" File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/alu.vhd Line: 207
+Info (12128): Elaborating entity "odd_parity_checker" for hierarchy "flags_main:instance_flags|odd_parity_checker:instance_odd_parity_checker" File: C:/dev/Quartus/SEM1.LSD.AV2.ARITHMETIC-LOGIC-UNIT/flags/flags.vhd Line: 45
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4786 megabytes
+    Info: Processing ended: Thu Nov 14 14:33:28 2024
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:19
 
 

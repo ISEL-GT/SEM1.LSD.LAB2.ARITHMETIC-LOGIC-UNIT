@@ -8,7 +8,7 @@ entity nand_gate is
 		A : in std_logic_vector(3 downto 0);
 		B : in std_logic_vector(3 downto 0);
 		
-		result : out std_logic_vector(3 downto 0);
+		result : out std_logic_vector(3 downto 0)
 	);
 	
 end nand_gate;
@@ -18,4 +18,4 @@ begin
 
 	result <= not (A and B);
 	
-end nand_gate;
+end structural;

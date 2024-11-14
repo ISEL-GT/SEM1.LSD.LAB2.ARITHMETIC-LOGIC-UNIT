@@ -8,9 +8,9 @@ entity alu is
 	port (
 		X    				  : in std_logic_vector(3 downto 0);
 		Y	  				  : in std_logic_vector(3 downto 0);
+		operation_bit_0  : in std_logic;
 		operation_bit_1  : in std_logic;
 		operation_bit_2  : in std_logic;
-		operation_bit_3  : in std_logic;
 		carry_borrow_in  : in std_logic; 
 		
 		result 			  : out std_logic_vector(3 downto 0);
@@ -28,7 +28,7 @@ end alu;
 architecture behavioral of alu is
 
 	-- Import the arithmetic unit 
-	component arithmetic_unit
+	component arithmeticunit
 	
 		port (
 			A    : in std_logic_vector(3 downto 0);
@@ -51,8 +51,8 @@ architecture behavioral of alu is
 			A 			: in std_logic_vector(3 downto 0);
 			B 			: in std_logic_vector(3 downto 0);
 			
-			S0 : in std_logic_vector;
-			S1 : in std_logic_vector;
+			S0 : in std_logic;
+			S1 : in std_logic;
 			
 			carry_out   : out std_logic;
 			result 		: out std_logic_vector(3 downto 0)
@@ -85,7 +85,7 @@ architecture behavioral of alu is
 			A : in std_logic_vector(3 downto 0);
 			B : in std_logic_vector(3 downto 0); 
 
-			selector : in std_logic_vector;
+			selector : in std_logic;
 
 			result : out std_logic_vector (3 downto 0) 
 		);
@@ -93,13 +93,13 @@ architecture behavioral of alu is
 	end component;
 	
 	-- Import the two inputs MUX
-	component flags
+	component flags_main
 	
 		port (
 			overflow 		    : in std_logic;
 			carry_borrow_in_au : in std_logic;
 			carry_borrow_in_lm : in std_logic;
-			result_mux 			 : in std_logic;
+			result_mux 			 : in std_logic_vector(3 downto 0);
 			operation_f 		 : in std_logic;
 			
 			carry_borrow_out 	 : out std_logic;
@@ -107,28 +107,27 @@ architecture behavioral of alu is
 			below_equal			 : out std_logic;
 			greater_equal 		 : out std_logic;
 			parity				 : out std_logic;
-			zeros					 : out std_logic;
+			zeros					 : out std_logic
 		);
 		
 	end component;
 	
 	-- Defines all the operation signals to be used
-	signal operation_a : out std_logic;
-	signal operation_b : out std_logic;
-	signal operation_c : out std_logic;
-	signal operation_d : out std_logic;
-	signal operation_e : out std_logic;
-	signal operation_f : out std_logic;
+	signal operation_a : std_logic;
+	signal operation_b : std_logic;
+	signal operation_c : std_logic;
+	signal operation_d : std_logic;
+	signal operation_e : std_logic;
+	signal operation_f : std_logic;
 	
 	-- Defines all the output signals
-	signal out_mux_yor 					: out std_logic_vector(3 downto 0);
-	signal carry_out_arithmetic_unit : out std_logic;
-	signal out_arithmetic_unit 		: out std_logic_vector(3 downto 0);
-	signal overflow_arithmetic_unit  : out std_logic;
-	signal carry_out_logic_module    : out std_logic;
-	signal out_logic_module				: out std_logic_vector(3 downto 0);
-	signal out_mux_main					: out std_logic_vector(3 downto 0);
-	
+	signal out_mux_yor 					: std_logic_vector(3 downto 0);
+	signal carry_out_arithmetic_unit : std_logic;
+	signal out_arithmetic_unit 		: std_logic_vector(3 downto 0);
+	signal overflow_arithmetic_unit  : std_logic;
+	signal carry_out_logic_module    : std_logic;
+	signal out_logic_module				: std_logic_vector(3 downto 0);
+	signal out_mux_main					: std_logic_vector(3 downto 0);
 	
 begin
 
@@ -154,15 +153,15 @@ begin
 	
 		port map (
 			A => Y,
-			B => '0000',
-			selector => operation_a;
+			B => "0000",
+			selector => operation_a,
 			
 			result => out_mux_yor
 		);
 		
 
 	-- Instantiates the arithmetic unit to perform math operations
-	instance_arithmetic_unit : arithmetic_unit
+	instance_arithmetic_unit : arithmeticunit
 	
 		port map (
 			A => X,
@@ -205,7 +204,7 @@ begin
 		
 	
 	-- Instantiates the flags module
-	instance_flags : flags 
+	instance_flags : flags_main
 		
 		port map (
 			overflow 		    => overflow_arithmetic_unit,
