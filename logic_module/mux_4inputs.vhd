@@ -12,8 +12,8 @@ entity mux_4inputs is
 	 C : in std_logic_vector(3 downto 0);
 	 D : in std_logic_vector(3 downto 0);	 
 	 
+	 S0 : in std_logic_vector(1 downto 0);
 	 S1 : in std_logic_vector(1 downto 0);
-	 S2 : in std_logic_vector(1 downto 0);
 
 	 result : out std_logic_vector (3 downto 0) 
  );
@@ -34,10 +34,10 @@ begin
 
 	-- Assigns every path to its logical expression (the one that will conduct
 	-- its result signal)
-	path_A <= A and (not S1) and (not s2);
-	path_B <= B and (not S1) and S2;
-	path_C <= C and S1 and (not S2);
-	path_D <= D and (not S1) and (not S2);
+	path_A <= A and (not S0) and (not s1);
+	path_B <= B and (not S0) and S1;
+	path_C <= C and S0 and (not S1);
+	path_D <= D and (not S0) and (not S1);
 	
 	result <= path_A or path_B or path_C or path_D;
 

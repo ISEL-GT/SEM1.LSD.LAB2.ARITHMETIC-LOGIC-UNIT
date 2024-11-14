@@ -1,12 +1,14 @@
 library ieee; 
 use ieee.std_logic_1164.all;
 
--- This entity is responsible for acting as a full adder, using two half-adders
--- in succession to account for first bit carries
+-- This entity is responsible for acting as a decoder, allowing us to select
+-- different operations on the ALU
 entity decoder is 
 
 	port (
-		operation_bits : in std_logic_vector(2 downto 0);
+		operation_bit_2 : in std_logic;
+		operation_bit_1 : in std_logic;
+		operation_bit_0 : in std_logic;
 		
 		operation_a : out std_logic;
 		operation_b : out std_logic;
@@ -20,26 +22,13 @@ end decoder;
 
 
 architecture structural of decoder is
-
-	-- A few signals to simplify expression reading and lower the amount of
-	-- bit checks that the compiler has to do
-	signal op2 : std_logic;
-	signal op1 : std_logic;
-	signal op0 : std_logic;
-
 begin
-	
-	op2 <= operation_bits(2);
-	op1 <= operation_bits(1);
-	op0 <= operation_bits(0);
 
-	-- Decode the values for operations, with 1 bit of t
-	operation_a <= op1;
-	operation_b <= op0;
-	operation_c <= op2;
-	operation_d <= op0;
-	operation_e <= op1;
-	operation_f <= op2;
-	
+	operation_a <= operation_bit_1;
+	operation_b <= operation_bit_0;
+	operation_c <= operation_bit_2;
+	operation_d <= operation_bit_0;
+	operation_e <= operation_bit_1;
+	operation_f <= operation_bit_2;
 	
 end structural;
