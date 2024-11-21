@@ -14,7 +14,7 @@ set_global_assignment -name INTERNAL_FLASH_UPDATE_MODE "SINGLE IMAGE WITH ERAM"
 # CLOCK
 #============================================================
 #set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK_50
-#set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK2_50
+#set_instance_assignment -name \ "3.3-V LVTTL" -to CLOCK2_50
 #set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK_ADC_10
 #set_location_assignment PIN_P11 -to CLOCK_50
 #set_location_assignment PIN_N14 -to CLOCK2_50
@@ -31,8 +31,8 @@ set_location_assignment PIN_A12 -to Y[0]
 set_location_assignment PIN_B12 -to Y[1]
 set_location_assignment PIN_A13 -to Y[2]
 set_location_assignment PIN_A14 -to Y[3]
-set_location_assignment PIN_B14 -to carry_borrow_in
-set_location_assignment PIN_F15 -to operation_bits[2]
+set_location_assignment PIN_B14 -to operation_bits[0]
+set_location_assignment PIN_F15 -to operation_bits[1]
 
 #============================================================
 # LED
@@ -306,8 +306,8 @@ set_location_assignment PIN_B11 -to below_equal
 #============================================================
 #set_instance_assignment -name IO_STANDARD "3.3 V SCHMITT TRIGGER" -to KEY[0]
 #set_instance_assignment -name IO_STANDARD "3.3 V SCHMITT TRIGGER" -to KEY[1]
-set_location_assignment PIN_B8 -to operation_bits[1]
-set_location_assignment PIN_A7 -to operation_bits[0]
+set_location_assignment PIN_B8 -to operation_bits[2]
+set_location_assignment PIN_A7 -to carry_borrow_in
 
 #============================================================
 # LED
