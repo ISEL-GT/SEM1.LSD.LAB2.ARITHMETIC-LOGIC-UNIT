@@ -56,7 +56,7 @@ begin
 		zeros 				<= zero_signal;
 		overflow_out  		<= overflow;
 		below_equal   		<= carry_borrow_in_au or zero_signal;
-		greater_equal 		<= not (zero_signal or result_mux(3) or overflow) or (overflow and result_mux(3)) or zero_signal;
+		greater_equal 		<= not (result_mux(3) or overflow) or (overflow and result_mux(3));
 		carry_borrow_out 	<= (carry_borrow_in_lm and operation_f) or (carry_borrow_in_au and not operation_f);
 		
 end behavioral;
