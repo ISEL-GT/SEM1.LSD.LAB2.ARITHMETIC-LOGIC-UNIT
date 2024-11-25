@@ -52,26 +52,8 @@ set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name VHDL_FILE flags/odd_parity_checker.vhd
-set_global_assignment -name VHDL_FILE logic_module/nand_gate.vhd
-set_global_assignment -name VHDL_FILE logic_module/mux_4inputs.vhd
-set_global_assignment -name VHDL_FILE logic_module/logical_shift_right.vhd
-set_global_assignment -name VHDL_FILE logic_module/logical_shift_left.vhd
-set_global_assignment -name VHDL_FILE logic_module/logic_module.vhd
-set_global_assignment -name VHDL_FILE logic_module/arithmetic_shift_right.vhd
-set_global_assignment -name VHDL_FILE arithmetic_unit/inner_arithmetic.vhd
-set_global_assignment -name VHDL_FILE arithmetic_unit/half_adder.vhd
-set_global_assignment -name VHDL_FILE arithmetic_unit/full_adder.vhd
-set_global_assignment -name VHDL_FILE arithmetic_unit/flags.vhd
-set_global_assignment -name VHDL_FILE arithmetic_unit/arithmeticunit.vhd
-set_global_assignment -name VHDL_FILE arithmetic_unit/adder_subtractor_4bits.vhd
-set_global_assignment -name VHDL_FILE mux_2inputs.vhd
-set_global_assignment -name VHDL_FILE decoder.vhd
-set_global_assignment -name VHDL_FILE alu.vhd
-set_global_assignment -name VHDL_FILE flags/flags.vhd
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
-set_global_assignment -name VHDL_FILE logic_module/mux_3inputs.vhd
 set_location_assignment PIN_C10 -to X[0]
 set_location_assignment PIN_C11 -to X[1]
 set_location_assignment PIN_D12 -to X[2]
@@ -95,3 +77,21 @@ set_location_assignment PIN_B11 -to below_equal
 set_location_assignment PIN_B8 -to operation_bits[1]
 set_location_assignment PIN_A7 -to operation_bits[0]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name VHDL_FILE flags/flags_main.vhd
+set_global_assignment -name VHDL_FILE flags/odd_parity_checker.vhd
+set_global_assignment -name VHDL_FILE logic_module/nand_gate.vhd
+set_global_assignment -name VHDL_FILE logic_module/mux_4inputs.vhd
+set_global_assignment -name VHDL_FILE logic_module/logical_shift_right.vhd
+set_global_assignment -name VHDL_FILE logic_module/logical_shift_left.vhd
+set_global_assignment -name VHDL_FILE logic_module/logic_module.vhd
+set_global_assignment -name VHDL_FILE logic_module/arithmetic_shift_right.vhd
+set_global_assignment -name VHDL_FILE arithmetic_unit/inner_arithmetic.vhd
+set_global_assignment -name VHDL_FILE arithmetic_unit/half_adder.vhd
+set_global_assignment -name VHDL_FILE arithmetic_unit/full_adder.vhd
+set_global_assignment -name VHDL_FILE arithmetic_unit/flags.vhd
+set_global_assignment -name VHDL_FILE arithmetic_unit/arithmeticunit.vhd
+set_global_assignment -name VHDL_FILE arithmetic_unit/adder_subtractor_4bits.vhd
+set_global_assignment -name VHDL_FILE mux_2inputs.vhd
+set_global_assignment -name VHDL_FILE decoder.vhd
+set_global_assignment -name VHDL_FILE alu.vhd
+set_global_assignment -name VHDL_FILE logic_module/mux_3inputs.vhd
